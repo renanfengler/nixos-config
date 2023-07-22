@@ -51,7 +51,9 @@
         defaultSession = "none+i3";
     };
     layout = "br";
-    videoDrivers = [ "nvidia" ];
+    #videoDrivers = [ "nvidia" ];
+    # Enable touchpad support (enabled default in most desktopManager).
+    # services.xserver.libinput.enable = true;
   };
 
   programs.xss-lock = {
@@ -65,9 +67,6 @@
   # Enable sound.
   sound.enable = true;
   hardware.pulseaudio.enable = true;
-
-  # Enable touchpad support (enabled default in most desktopManager).
-  # services.xserver.libinput.enable = true;
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users = {
