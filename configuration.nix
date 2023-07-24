@@ -33,14 +33,15 @@
 
   programs.hyprland = {
       enable = true;
-      xwayland = {
-          enable = true;
-          hidpi = true;
-      };
+      # xwayland = {
+      #     enable = true;
+      #     hidpi = true;
+      # };
   };
-  services.xserver = {
-    enable = true;
-    desktopManager.xterm.enable = false;
+
+  # services.xserver = {
+  #   enable = true;
+  #   desktopManager.xterm.enable = false;
   #   windowManager.i3 = {
   #       enable = true;
   #       configFile = /home/renan/.config/i3/config;
@@ -50,13 +51,13 @@
   #           i3lock
   #       ];
   #   };
-    displayManager = {
-        sddm.enable = true;
-        # defaultSession = "none+i3";
-    };
+  #   displayManager = {
+  #       sddm.enable = true;
+  #       defaultSession = "none+i3";
+  #   };
   #   # Enable touchpad support (enabled default in most desktopManager).
   #   # services.xserver.libinput.enable = true;
-  };
+  # };
 
   programs.xss-lock = {
     enable = true;
@@ -88,6 +89,7 @@
     fzf
     gtk-engine-murrine
     gtk_engines
+    hyprpaper
     man
     openvpn
     ripgrep
@@ -95,6 +97,7 @@
     sshfs
     unzip
     wget
+    wofi
     xsel
 
     # Git
