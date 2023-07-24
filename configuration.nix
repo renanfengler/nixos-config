@@ -13,13 +13,10 @@
   boot.loader.efi.canTouchEfiVariables = true;
 
   networking.hostName = "nixos"; # Define your hostname.
-  # Pick only one of the below networking options.
-  # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
   networking.networkmanager.enable = true;  # Easiest to use and most distros use this by default.
 
   time.timeZone = "America/Sao_Paulo";
 
-  # Select internationalisation properties.
   i18n.defaultLocale = "en_US.UTF-8";
   console = {
     font = "Lat2-Terminus16";
@@ -34,26 +31,31 @@
     ];
   };
 
+  programs.hyprland = {
+      enable = true;
+      xwayland = {
+          enable = true;
+          hidpi = true;
+      };
+  };
   services.xserver = {
     enable = true;
     desktopManager.xterm.enable = false;
-    windowManager.i3 = {
-        enable = true;
-        configFile = /home/renan/.config/i3/config;
-        extraPackages = with pkgs; [
-            dmenu
-            i3status
-            i3lock
-        ];
-    };
+  #   windowManager.i3 = {
+  #       enable = true;
+  #       configFile = /home/renan/.config/i3/config;
+  #       extraPackages = with pkgs; [
+  #           dmenu
+  #           i3status
+  #           i3lock
+  #       ];
+  #   };
     displayManager = {
         sddm.enable = true;
-        defaultSession = "none+i3";
+        # defaultSession = "none+i3";
     };
-    layout = "br";
-    #videoDrivers = [ "nvidia" ];
-    # Enable touchpad support (enabled default in most desktopManager).
-    # services.xserver.libinput.enable = true;
+  #   # Enable touchpad support (enabled default in most desktopManager).
+  #   # services.xserver.libinput.enable = true;
   };
 
   programs.xss-lock = {
@@ -68,7 +70,6 @@
   sound.enable = true;
   hardware.pulseaudio.enable = true;
 
-  # Define a user account. Don't forget to set a password with ‘passwd’.
   users = {
     defaultUserShell = pkgs.zsh;
     users.renan = {
@@ -89,13 +90,11 @@
     gtk_engines
     man
     openvpn
-    gnumake
     ripgrep
     sudo
     sshfs
     unzip
     wget
-    xorg.xmodmap
     xsel
 
     # Git
@@ -103,8 +102,9 @@
     gh
     yadm
 
-    # GNU Conpiler Collection and more stuff
+    # GNU Compiler Collection and more stuff
     libgccjit
+    gnumake
     llvmPackages_16.stdenv
     gcc13Stdenv
     gcc
@@ -112,7 +112,7 @@
     # Apps
     firefox
     spotify
-    microsoft-edge
+    # microsoft-edge
 
     # Terminal/Shell
     kitty
@@ -126,7 +126,6 @@
     neovim
     vim
     helix
-    vscode
 
     # Programming
     nodejs
@@ -134,16 +133,10 @@
     rustup
 
     # Customization
-    nitrogen
     playerctl
     betterlockscreen
     polybar
   ];
-
-  environment.plasma5.excludePackages = with pkgs.libsForQt5; [
-    konsole
-    oxygen
-  ]; 
 
   environment.variables = {
     EDITOR = "nvim";
@@ -184,32 +177,6 @@
 
   programs.autojump.enable = true;
   
-  services.picom = {
-      enable = true;
-      shadow = true;
-      shadowOpacity = 0.9;
-      backend = "glx";
-      vSync = true;
-      inactiveOpacity = 0.9;
-      activeOpacity = 1.0;
-      opacityRules = [
-          "100:class_g *= 'firefox'"
-          "100:class_g *= 'microsoft-edge'"
-      ];
-      fade = true;
-      fadeDelta = 7;
-      settings = {
-          blur = { 
-              method = "dual_kawase";
-              size = 10;
-              deviation = 3.0;
-          };
-          corner-radius = 8;
-      };
-  };
-  # hardware.nvidia.forceFullCompositionPipeline = true;
-
-
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
   # programs.mtr.enable = true;
