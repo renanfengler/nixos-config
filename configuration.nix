@@ -85,6 +85,7 @@
     # General
     bat
     curl
+    exa
     fd
     fzf
     gtk-engine-murrine
