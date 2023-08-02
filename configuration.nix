@@ -33,31 +33,7 @@
 
   programs.hyprland = {
       enable = true;
-      # xwayland = {
-      #     enable = true;
-      #     hidpi = true;
-      # };
   };
-
-  # services.xserver = {
-  #   enable = true;
-  #   desktopManager.xterm.enable = false;
-  #   windowManager.i3 = {
-  #       enable = true;
-  #       configFile = /home/renan/.config/i3/config;
-  #       extraPackages = with pkgs; [
-  #           dmenu
-  #           i3status
-  #           i3lock
-  #       ];
-  #   };
-  #   displayManager = {
-  #       sddm.enable = true;
-  #       defaultSession = "none+i3";
-  #   };
-  #   # Enable touchpad support (enabled default in most desktopManager).
-  #   # services.xserver.libinput.enable = true;
-  # };
 
   programs.xss-lock = {
     enable = true;
@@ -91,11 +67,9 @@
     gtk-engine-murrine
     gtk_engines
     hyprpaper
-    man
     openvpn
     ripgrep
     sudo
-    sshfs
     unzip
     wget
     wofi
@@ -115,8 +89,6 @@
 
     # Apps
     firefox
-    spotify
-    # microsoft-edge
 
     # Terminal/Shell
     kitty
