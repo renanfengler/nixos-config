@@ -64,8 +64,6 @@
     exa
     fd
     fzf
-    gtk-engine-murrine
-    gtk_engines
     hyprpaper
     openvpn
     ripgrep
@@ -73,7 +71,7 @@
     unzip
     wget
     wofi
-    xsel
+    wl-clipboard
 
     # Git
     git
