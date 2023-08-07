@@ -2,13 +2,18 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running `nixos-help`).
 
-{ config, pkgs, ... }:
+{ config, pkgs, lib, ... }:
 
 {
   nixpkgs.config.allowUnfree = true;
   imports = [ ./hardware-configuration.nix ];
 
   nix.settings.experimental-features = ["nix-command" "flakes"];
+
+  # Permite executar binários "normais" no nix
+  # https://github.com/Mic92/nix-ld
+  # https://unix.stackexchange.com/questions/522822/different-methods-to-run-a-non-nixos-executable-on-nixos/522823#522823
+  programs.nix-ld.enable = true;
 
   # Use the systemd-boot EFI boot loader.
   boot.loader.systemd-boot.enable = true;
@@ -57,8 +62,6 @@
     };
   };
 
-  # List packages installed in system profile. To search, run:
-  # $ nix search wget
   environment.systemPackages = with pkgs; [
     # General
     bat
@@ -124,6 +127,7 @@
           source ${pkgs.zsh-autosuggestions}/share/zsh-autosuggestions/zsh-autosuggestions.zsh
           source ${pkgs.zsh-powerlevel10k}/share/zsh-powerlevel10k/powerlevel10k.zsh-theme
           source ${pkgs.zsh-syntax-highlighting}/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+          source ${pkgs.oh-my-zsh}/share/oh-my-zsh/plugins/zsh-interactive-cd/zsh-interactive-cd.plugin.zsh
           if [ -f ~/.zsh_aliases ]; then
               . ~/.zsh_aliases
           fi
@@ -133,8 +137,6 @@
           plugins = [
               "autojump"
               "colored-man-pages"
-              "colorize"
-              "command-not-found"
               "copybuffer"
               "copyfile"
               "copypath"
