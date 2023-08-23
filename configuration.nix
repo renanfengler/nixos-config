@@ -64,6 +64,7 @@
 
   environment.systemPackages = with pkgs; [
     # General
+    acpi
     bat
     curl
     exa
