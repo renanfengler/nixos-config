@@ -115,7 +115,7 @@
         playerctl
         betterlockscreen
         polybar
-        eww
+        eww-wayland
     ];
 
     environment.variables = {
