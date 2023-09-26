@@ -63,10 +63,10 @@
 
     environment.systemPackages = with pkgs; [
 # General
-        acpi
-        bat
+        acpi # bateria
+        bat #cat melhoradi
         curl
-        exa
+        exa # ls melhorado
         fd
         fzf
         hyprpaper
@@ -75,7 +75,7 @@
         sudo
         unzip
         wget
-        wofi
+        wofi # launcher
         wl-clipboard
 
 # Git
@@ -113,8 +113,8 @@
 
 # Customization
         playerctl
+        pamixer #mixer para pulseaudio
         betterlockscreen
-        polybar
         eww-wayland
     ];
 
