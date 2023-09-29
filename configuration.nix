@@ -22,7 +22,13 @@
     networking = {
         hostName = "nixos"; # Define your hostname.
         networkmanager.enable = true;  # Easiest to use and most distros use this by default.
+        networkmanager.dns = "none";
         nameservers = ["8.8.8.8"];
+        extraHosts = ''
+            127.0.0.1       localhost s3
+            127.0.1.1       nixos
+            52.216.62.232   s3.amazonaws.com
+        '';
     };
 
     time.timeZone = "America/Sao_Paulo";
@@ -55,6 +61,8 @@
 # Enable sound.
     sound.enable = true;
     hardware.pulseaudio.enable = true;
+
+    virtualisation.docker.enable = true;
 
     users = {
         defaultUserShell = pkgs.zsh;
@@ -113,8 +121,8 @@
         nodejs
         python3
         rustup
-        docker
         php
+        yarn
 
 # Customization
         playerctl
