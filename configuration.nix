@@ -146,6 +146,11 @@
             if [ -f ~/.zsh_aliases ]; then
                 . ~/.zsh_aliases
             fi
+
+            export PATH=$PATH:$HOME/.local/bin
+
+            [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+            fpath+=${ZDOTDIR:-~}/.zsh_functions
         '';
         ohMyZsh = {
             enable = true;
