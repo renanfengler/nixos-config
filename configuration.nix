@@ -119,7 +119,7 @@
         helix
 
 # Programming
-        nodejs
+        nvm
         python3
         rustup
         php
