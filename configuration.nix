@@ -92,6 +92,7 @@
 # Git
         git
         gh
+        lazygit
         yadm
 
 # GNU Compiler Collection and more stuff
