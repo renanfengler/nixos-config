@@ -104,6 +104,7 @@
 
 # Apps
         firefox
+        slack
 
 # Terminal/Shell
         kitty
@@ -119,17 +120,22 @@
         helix
 
 # Programming
-        nvm
+        nodejs
+        lefthook
+        meld
+        php82
+        php82Packages.composer
+        php82Extensions.ds
         python3
         rustup
-        php
         yarn
 
 # Customization
         playerctl
-        pamixer #mixer para pulseaudio
+        pamixer # mixer para pulseaudio
         betterlockscreen
         eww-wayland
+        dunst # notification daemon
     ];
 
     environment.variables = {
@@ -143,9 +149,8 @@
             source ${pkgs.zsh-powerlevel10k}/share/zsh-powerlevel10k/powerlevel10k.zsh-theme
             source ${pkgs.zsh-syntax-highlighting}/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
             source ${pkgs.oh-my-zsh}/share/oh-my-zsh/plugins/zsh-interactive-cd/zsh-interactive-cd.plugin.zsh
-            if [ -f ~/.zsh_aliases ]; then
-                . ~/.zsh_aliases
-            fi
+
+            [[ ! -f ~/.zsh_aliases ]] || source ~/.zsh_aliases
 
             export PATH=$PATH:$HOME/.local/bin
 
