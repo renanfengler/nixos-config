@@ -76,6 +76,7 @@
 # General
         acpi # bateria
         bat #cat melhoradi
+        brightnessctl
         curl
         exa # ls melhorado
         fd
