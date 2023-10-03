@@ -111,9 +111,7 @@
         kitty
         tmux
         zsh
-        zsh-autosuggestions
         zsh-powerlevel10k
-        zsh-syntax-highlighting
 
 # Editors
         neovim
@@ -147,9 +145,7 @@
     programs.zsh = {
         enable = true;
         interactiveShellInit = ''
-            source ${pkgs.zsh-autosuggestions}/share/zsh-autosuggestions/zsh-autosuggestions.zsh
             source ${pkgs.zsh-powerlevel10k}/share/zsh-powerlevel10k/powerlevel10k.zsh-theme
-            source ${pkgs.zsh-syntax-highlighting}/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
             source ${pkgs.oh-my-zsh}/share/oh-my-zsh/plugins/zsh-interactive-cd/zsh-interactive-cd.plugin.zsh
 
             [[ ! -f ~/.zsh_aliases ]] || source ~/.zsh_aliases
@@ -177,6 +173,12 @@
                 "rust"
                 "tmux"
             ];
+        };
+        syntaxHighlighting = {
+            enable = true;
+        };
+        autosuggestions = {
+            enable = true;
         };
     };
 
