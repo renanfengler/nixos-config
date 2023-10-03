@@ -118,7 +118,6 @@
 # Editors
         neovim
         vim
-        helix
 
 # Programming
         nodejs
