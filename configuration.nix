@@ -82,6 +82,7 @@
         fd
         fzf
         hyprpaper
+        imagemagick
         openvpn
         ripgrep
         sudo
@@ -134,8 +135,6 @@
         betterlockscreen
         eww-wayland
         dunst # notification daemon
-
-        imagemagick
     ];
 
     environment.variables = {
@@ -147,8 +146,6 @@
         interactiveShellInit = ''
             source ${pkgs.zsh-powerlevel10k}/share/zsh-powerlevel10k/powerlevel10k.zsh-theme
             source ${pkgs.oh-my-zsh}/share/oh-my-zsh/plugins/zsh-interactive-cd/zsh-interactive-cd.plugin.zsh
-
-            [[ ! -f ~/.zsh_aliases ]] || source ~/.zsh_aliases
 
             export PATH=$PATH:$HOME/.local/bin
 
