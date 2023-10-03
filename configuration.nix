@@ -136,6 +136,8 @@
         betterlockscreen
         eww-wayland
         dunst # notification daemon
+
+        imagemagick
     ];
 
     environment.variables = {
