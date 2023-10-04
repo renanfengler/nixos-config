@@ -135,6 +135,7 @@
         betterlockscreen
         eww-wayland
         dunst # notification daemon
+        wev
     ];
 
     environment.variables = {
