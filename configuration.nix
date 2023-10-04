@@ -76,33 +76,39 @@
 # General
         acpi # bateria
         bat #cat melhoradi
+        betterlockscreen
         brightnessctl
         curl
+        dunst # notification daemon
+        eww-wayland
         exa # ls melhorado
         fd
         fzf
         hyprpaper
         imagemagick
         openvpn
+        pamixer # mixer para pulseaudio
+        playerctl
         ripgrep
         sudo
         unzip
+        wev
         wget
-        wofi # launcher
         wl-clipboard
+        wofi # launcher
 
 # Git
-        git
         gh
+        git
         lazygit
         yadm
 
 # GNU Compiler Collection and more stuff
-        libgccjit
-        gnumake
-        llvmPackages_16.stdenv
-        gcc13Stdenv
         gcc
+        gcc13Stdenv
+        gnumake
+        libgccjit
+        llvmPackages_16.stdenv
 
 # Apps
         firefox
@@ -118,23 +124,15 @@
         vim
 
 # Programming
-        nodejs
         lefthook
         meld
+        nodejs
         php82
-        php82Packages.composer
         php82Extensions.ds
+        php82Packages.composer
         python3
         rustup
         yarn
-
-# Customization
-        playerctl
-        pamixer # mixer para pulseaudio
-        betterlockscreen
-        eww-wayland
-        dunst # notification daemon
-        wev
     ];
 
     environment.variables = {
