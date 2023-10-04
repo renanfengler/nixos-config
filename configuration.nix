@@ -181,6 +181,12 @@
 
     programs.autojump.enable = true;
 
+    services.openvpn.servers = {
+        awiseVPN = {
+            config = '' config /home/renan/src/vpn/client.ovpn '';
+        };
+    };
+
 # Some programs need SUID wrappers, can be configured further or are
 # started in user sessions.
 # programs.mtr.enable = true;
