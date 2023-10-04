@@ -111,7 +111,6 @@
 # Terminal/Shell
         kitty
         tmux
-        zsh
         zsh-powerlevel10k
 
 # Editors
@@ -144,6 +143,7 @@
 
     programs.zsh = {
         enable = true;
+        autosuggestions.enable = true;
         interactiveShellInit = ''
             source ${pkgs.zsh-powerlevel10k}/share/zsh-powerlevel10k/powerlevel10k.zsh-theme
             source ${pkgs.oh-my-zsh}/share/oh-my-zsh/plugins/zsh-interactive-cd/zsh-interactive-cd.plugin.zsh
@@ -173,12 +173,19 @@
                 "tmux"
             ];
         };
-        syntaxHighlighting = {
-            enable = true;
+        shellAliases = {
+            # General stuff
+            lg = "lazygit";
+            n = "nvim";
+            ls = "exa";
+            la = "exa -la";
+            ll = "exa --long --header --git";
+
+            # Kitty
+            icat = "kitty +kitten icat";
+            s = "kitty +kitten ssh";
         };
-        autosuggestions = {
-            enable = true;
-        };
+        syntaxHighlighting.enable = true;
     };
 
     programs.autojump.enable = true;
