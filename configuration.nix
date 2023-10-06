@@ -84,6 +84,7 @@
         exa # ls melhorado
         fd
         fzf
+        gscreenshot
         hyprpaper
         imagemagick
         openvpn
