@@ -8,6 +8,10 @@
     nixpkgs.config.allowUnfree = true;
     imports = [ ./hardware-configuration.nix ];
 
+    hardware.bluetooth = {
+        enable = true;
+    };
+
     nix.settings.experimental-features = ["nix-command" "flakes"];
 
 # Permite executar binários "normais" no nix
@@ -75,7 +79,7 @@
     environment.systemPackages = with pkgs; [
 # General
         acpi # bateria
-        bat #cat melhoradi
+        bat
         betterlockscreen
         brightnessctl
         curl
