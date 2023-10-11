@@ -84,6 +84,7 @@
         exa # ls melhorado
         fd
         fzf
+        grc
         gscreenshot
         hyprpaper
         imagemagick
