@@ -98,6 +98,7 @@
         wget
         wl-clipboard
         wofi # launcher
+        xdg-desktop-portal-hyprland
 
 # Git
         gh
