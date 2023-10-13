@@ -188,7 +188,7 @@
             s = "kitty +kitten ssh";
 
             #Git
-            gac = "git add ./"
+            gac = "git add ./";
         };
         syntaxHighlighting.enable = true;
     };
