@@ -186,6 +186,9 @@
             # Kitty
             icat = "kitty +kitten icat";
             s = "kitty +kitten ssh";
+
+            #Git
+            gac = "git add ./"
         };
         syntaxHighlighting.enable = true;
     };
