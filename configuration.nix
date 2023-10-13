@@ -87,6 +87,7 @@
         grc
         gscreenshot
         hyprpaper
+        hyprpicker
         imagemagick
         openvpn
         pamixer # mixer para pulseaudio
