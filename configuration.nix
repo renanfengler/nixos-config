@@ -97,6 +97,7 @@
         pamixer # mixer para pulseaudio
         playerctl
         ripgrep
+        socat
         sudo
         unzip
         wev
