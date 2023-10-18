@@ -83,7 +83,6 @@
         betterlockscreen
         brightnessctl
         curl
-        dunst # notification daemon
         eww-wayland
         exa # ls melhorado
         fd
@@ -99,6 +98,7 @@
         ripgrep
         socat
         sudo
+        swaynotificationcenter # Notification daemon
         unzip
         wev
         wget
