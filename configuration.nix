@@ -88,6 +88,7 @@
         fd
         fzf
         grc
+        grim
         gscreenshot
         hyprpaper
         hyprpicker
@@ -98,6 +99,7 @@
         pamixer # mixer para pulseaudio
         playerctl
         ripgrep
+        slurp
         socat
         sudo
         swaynotificationcenter # Notification daemon
