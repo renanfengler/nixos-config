@@ -89,7 +89,6 @@
         fzf
         grc
         grim
-        gscreenshot
         hyprpaper
         hyprpicker
         imagemagick
