@@ -109,6 +109,8 @@
         slurp
         socat
         sudo
+        swayidle
+        swaylock-effects
         swaynotificationcenter # Notification daemon
         unzip
         wev
