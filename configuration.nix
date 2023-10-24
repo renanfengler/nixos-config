@@ -23,6 +23,14 @@
     boot.loader.systemd-boot.enable = true;
     boot.loader.efi.canTouchEfiVariables = true;
 
+    boot.kernelModules = ["uinput"];
+    services.udev = {
+        enable = true;
+        extraRules = ''
+            KERNEL=="uinput", GROUP="input", TAG+="uaccess"
+        '';
+    };
+
     networking = {
         hostName = "nixos"; # Define your hostname.
         networkmanager.enable = true;  # Easiest to use and most distros use this by default.
