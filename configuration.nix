@@ -84,6 +84,11 @@
         };
     };
 
+    security.pam.services.swaylock = {
+        text = ''
+            auth include login
+        '';
+    };
     environment.systemPackages = with pkgs; [
 # General
         acpi # bateria
