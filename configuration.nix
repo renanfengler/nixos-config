@@ -166,6 +166,8 @@
         EDITOR = "nvim";
     };
 
+    environment.etc."xdg/swaync/configSchema.json".source = "${pkgs.swaynotificationcenter}/etc/xdg/swaync/configSchema.json";
+
     programs.zsh = {
         enable = true;
         autosuggestions.enable = true;
