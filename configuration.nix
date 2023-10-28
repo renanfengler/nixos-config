@@ -145,6 +145,7 @@
         kitty
         tmux
         zsh-powerlevel10k
+        zsh-nix-shell
 
 # Editors
         neovim
@@ -204,6 +205,7 @@
         shellAliases = {
             # General stuff
             lg = "lazygit";
+            ly = "lg -w ~ -g ~/.local/share/yadm/repo.git";
             n = "nvim";
             ls = "exa";
             la = "exa -la";
