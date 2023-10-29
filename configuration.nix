@@ -91,7 +91,6 @@
     };
     environment.systemPackages = with pkgs; [
 # General
-        acpi # bateria
         bat
         betterlockscreen
         brightnessctl
