@@ -24,11 +24,25 @@
     boot.loader.efi.canTouchEfiVariables = true;
 
     boot.kernelModules = ["uinput"];
-    services.udev = {
-        enable = true;
-        extraRules = ''
-            KERNEL=="uinput", GROUP="input", TAG+="uaccess"
-        '';
+    services = {
+        udev = {
+            enable = true;
+            extraRules = ''
+                KERNEL=="uinput", GROUP="input", TAG+="uaccess"
+            '';
+        };
+
+        openvpn.servers = {
+            awiseVPN = {
+                config = '' config /home/renan/src/vpn/client.ovpn '';
+            };
+        };
+
+        openssh.enable = true; # Enable the OpenSSH daemon.
+        printing.enable = true; # Enable CUPS to print documents.
+        acpid = {
+            enable = true;
+        };
     };
 
     networking = {
@@ -66,9 +80,6 @@
         enable = true;
         lockerCommand = "${pkgs.betterlockscreen}/bin/betterlockscreen";
     };
-
-# Enable CUPS to print documents.
-    services.printing.enable = true;
 
 # Enable sound.
     sound.enable = true;
@@ -222,12 +233,6 @@
 
     programs.autojump.enable = true;
 
-    services.openvpn.servers = {
-        awiseVPN = {
-            config = '' config /home/renan/src/vpn/client.ovpn '';
-        };
-    };
-
 # Some programs need SUID wrappers, can be configured further or are
 # started in user sessions.
 # programs.mtr.enable = true;
@@ -235,11 +240,6 @@
 #   enable = true;
 #   enableSSHSupport = true;
 # };
-
-# List services that you want to enable:
-
-# Enable the OpenSSH daemon.
-    services.openssh.enable = true;
 
 # Open ports in the firewall.
 # networking.firewall.allowedTCPPorts = [ ... ];
