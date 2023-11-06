@@ -210,6 +210,7 @@
                 "ripgrep"
                 "rust"
                 "tmux"
+                "yarn"
             ];
         };
         shellAliases = {
