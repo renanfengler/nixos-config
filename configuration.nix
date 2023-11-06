@@ -228,6 +228,7 @@
 
             #Git
             gac = "git add ./";
+            git-restore-last = "git reset $(echo $(git log --skip=1 -1 --pretty=format:'%H'))";
         };
         syntaxHighlighting.enable = true;
     };
