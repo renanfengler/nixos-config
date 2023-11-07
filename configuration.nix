@@ -76,11 +76,6 @@
         enable = true;
     };
 
-    programs.xss-lock = {
-        enable = true;
-        lockerCommand = "${pkgs.betterlockscreen}/bin/betterlockscreen";
-    };
-
 # Enable sound.
     sound.enable = true;
     hardware.pulseaudio.enable = true;
@@ -103,7 +98,6 @@
     environment.systemPackages = with pkgs; [
 # General
         bat
-        betterlockscreen
         brightnessctl
         curl
         eww-wayland
