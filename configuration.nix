@@ -111,7 +111,6 @@
         imagemagick
         libnotify
         neofetch
-        openvpn
         pamixer # mixer para pulseaudio
         playerctl
         ripgrep
