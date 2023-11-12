@@ -101,11 +101,11 @@
         brightnessctl
         curl
         eww-wayland
-        exa # ls melhorado
+        exa
         fd
         fzf
         grc
-        grim
+        grim # for screenshots
         hyprpaper
         hyprpicker
         imagemagick
@@ -114,17 +114,17 @@
         pamixer # mixer para pulseaudio
         playerctl
         ripgrep
-        slurp
+        slurp # for screenshots
         socat
         sudo
         swayidle
         swaylock-effects
-        swaynotificationcenter # Notification daemon
+        swaynotificationcenter
         unzip
         wev
         wget
         wl-clipboard
-        wofi # launcher
+        wofi
         xdg-desktop-portal-hyprland
 
 # Git
@@ -222,6 +222,7 @@
             #Git
             gac = "git add ./";
             git-restore-last = "git reset $(echo $(git log --skip=1 -1 --pretty=format:'%H'))";
+            yl = "yadm push";
         };
         syntaxHighlighting.enable = true;
     };
