@@ -215,6 +215,8 @@
             ls = "exa";
             la = "exa -la";
             ll = "exa --long --header --git";
+            connectwifi = "sudo nmcli dev wifi connect";
+            rmorig = "rm **/*.orig";
 
             # Kitty
             icat = "kitty +kitten icat";
@@ -222,8 +224,18 @@
 
             #Git
             gac = "git add ./";
+            gca = "git commit --amend --no-edit";
             git-restore-last = "git reset $(echo $(git log --skip=1 -1 --pretty=format:'%H'))";
-            yl = "yadm push";
+            yl = "yadm pull";
+            yp = "yadm push";
+
+            # Neovim
+            nswap = "rm ~/.local/state/nvim/swap/*";
+            nff = "nvim '+Telescope find_files'";
+
+            # Docker
+            dps = "docker compose ps";
+            dockerip = "docker inspect --format='{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}'";
         };
         syntaxHighlighting.enable = true;
     };
