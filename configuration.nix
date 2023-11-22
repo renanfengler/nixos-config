@@ -68,7 +68,7 @@
         fontDir.enable = true;
         fonts = with pkgs; [
             siji
-            (nerdfonts.override { fonts = [ "Meslo" ]; })
+            (nerdfonts.override { fonts = [ "Meslo" "JetBrainsMono" ]; })
         ];
     };
 
