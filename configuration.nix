@@ -68,7 +68,7 @@
         fontDir.enable = true;
         fonts = with pkgs; [
             siji
-            (nerdfonts.override { fonts = [ "Meslo" "JetBrainsMono" ]; })
+            (nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
         ];
     };
 
@@ -215,6 +215,7 @@
             ls = "exa";
             la = "exa -la";
             ll = "exa --long --header --git";
+            tree = "exa --tree --git-ignore";
             connectwifi = "sudo nmcli dev wifi connect";
             rmorig = "rm **/*.orig";
 
