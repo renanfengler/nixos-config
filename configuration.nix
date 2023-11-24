@@ -121,7 +121,6 @@
         swaylock-effects
         swaynotificationcenter
         unzip
-        wev
         wget
         wl-clipboard
         wofi
@@ -153,7 +152,6 @@
 
 # Editors
         neovim
-        vim
 
 # Programming
         lefthook
