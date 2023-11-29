@@ -14,11 +14,6 @@
 
     nix.settings.experimental-features = ["nix-command" "flakes"];
 
-# Permite executar binários "normais" no nix
-# https://github.com/Mic92/nix-ld
-# https://unix.stackexchange.com/questions/522822/different-methods-to-run-a-non-nixos-executable-on-nixos/522823#522823
-    programs.nix-ld.enable = true;
-
 # Use the systemd-boot EFI boot loader.
     boot.loader.systemd-boot.enable = true;
     boot.loader.efi.canTouchEfiVariables = true;
@@ -70,10 +65,6 @@
             siji
             (nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
         ];
-    };
-
-    programs.hyprland = {
-        enable = true;
     };
 
 # Enable sound.
@@ -142,6 +133,7 @@
 # Apps
         firefox
         slack
+        spotify
 
 # Terminal/Shell
         kitty
@@ -239,6 +231,15 @@
     };
 
     programs.autojump.enable = true;
+
+    programs.hyprland = {
+        enable = true;
+    };
+
+# Permite executar binários "normais" no nix
+# https://github.com/Mic92/nix-ld
+# https://unix.stackexchange.com/questions/522822/different-methods-to-run-a-non-nixos-executable-on-nixos/522823#522823
+    programs.nix-ld.enable = true;
 
 # Some programs need SUID wrappers, can be configured further or are
 # started in user sessions.
