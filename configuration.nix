@@ -99,7 +99,7 @@
 # General
         bat
         brightnessctl
-        curl
+        dunst
         eww-wayland
         exa
         fd
@@ -119,7 +119,6 @@
         sudo
         swayidle
         swaylock-effects
-        swaynotificationcenter
         unzip
         wget
         wl-clipboard
