@@ -38,8 +38,6 @@
         acpid = {
             enable = true;
         };
-
-        localtimed.enable = true;
     };
 
     networking = {
