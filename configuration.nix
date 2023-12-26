@@ -132,12 +132,14 @@
         lazygit
         yadm
 
-# GNU Compiler Collection and more stuff
+# Linux stuff
+        btrfs-progs
         gcc
         gcc13Stdenv
         gnumake
         libgccjit
         llvmPackages_16.stdenv
+        util-linux
 
 # Apps
         firefox
@@ -154,6 +156,7 @@
         neovim
 
 # Programming
+        insomnia
         lefthook
         meld
         nodejs
