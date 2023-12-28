@@ -237,7 +237,6 @@
 
             # Docker
             dps = "docker compose ps";
-            dockerip = "docker inspect --format='{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}'";
         };
         syntaxHighlighting.enable = true;
     };
