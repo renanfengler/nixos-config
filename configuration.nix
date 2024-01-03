@@ -145,6 +145,7 @@
         firefox
         slack
         spotify
+        google-chrome
 
 # Terminal/Shell
         kitty
