@@ -231,6 +231,7 @@
             git-restore-last = "git reset $(echo $(git log --skip=1 -1 --pretty=format:'%H'))";
             yl = "yadm pull";
             yp = "yadm push";
+            git-get-task = "git log --pretty=format:\"%s\" | fzf | rg -o \"\\[.*\\]\" | xargs wl-copy";
 
             # Neovim
             nswap = "rm ~/.local/state/nvim/swap/*";
@@ -284,4 +285,3 @@
 # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
     system.stateVersion = "23.05"; # Did you read the comment?
 }
-
