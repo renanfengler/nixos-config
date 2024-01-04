@@ -228,7 +228,6 @@
             #Git
             gac = "git add ./";
             gca = "git commit --amend --no-edit";
-            git-restore-last = "git reset $(echo $(git log --skip=1 -1 --pretty=format:'%H'))";
             yl = "yadm pull";
             yp = "yadm push";
             git-get-task = "git log --pretty=format:\"%s\" | fzf | rg -o \"\\[.*\\]\" | xargs wl-copy";
