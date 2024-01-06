@@ -143,6 +143,8 @@
 
 # Apps
         firefox
+        qbittorrent
+        mpv
         slack
         spotify
         google-chrome
