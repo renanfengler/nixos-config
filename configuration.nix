@@ -143,23 +143,23 @@
 
 # Apps
         firefox
-        qbittorrent
+        google-chrome
         mpv
+        qbittorrent
         slack
         spotify
-        google-chrome
 
 # Terminal/Shell
         gum
         kitty
         tmux
         zsh-powerlevel10k
-        zsh-nix-shell
 
 # Editors
         neovim
 
 # Programming
+        go
         insomnia
         lefthook
         meld
