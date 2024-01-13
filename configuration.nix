@@ -150,6 +150,7 @@
         google-chrome
 
 # Terminal/Shell
+        gum
         kitty
         tmux
         zsh-powerlevel10k
