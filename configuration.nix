@@ -95,6 +95,7 @@
             auth include login
         '';
     };
+
     environment.systemPackages = with pkgs; [
 # General
         bat
@@ -107,7 +108,6 @@
         grc
         grim # for screenshots
         hyprpaper
-        hyprpicker
         imagemagick
         libnotify
         neofetch
@@ -172,8 +172,6 @@
     environment.variables = {
         EDITOR = "nvim";
     };
-
-    environment.etc."xdg/swaync/configSchema.json".source = "${pkgs.swaynotificationcenter}/etc/xdg/swaync/configSchema.json";
 
     programs.zsh = {
         enable = true;
