@@ -183,6 +183,7 @@
             export PATH=$PATH:$HOME/.local/bin
             export PATH=$PATH:$HOME/.config/yarn/global/node_modules/.bin/
             export PATH=$PATH:$HOME/.cargo/bin/
+            export PATH=$PATH:$HOME/go/bin/
 
             [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
             fpath+=${ZDOTDIR:-~}/.zsh_functions
