@@ -102,7 +102,7 @@
         brightnessctl
         dunst
         eww-wayland
-        exa
+        eza
         fd
         fzf
         grc
@@ -214,10 +214,10 @@
             lg = "lazygit";
             ly = "lg -w ~ -g ~/.local/share/yadm/repo.git";
             n = "nvim";
-            ls = "exa";
-            la = "exa -la";
-            ll = "exa --long --header --git";
-            tree = "exa --tree --git-ignore";
+            ls = "eza";
+            la = "eza -la";
+            ll = "eza --long --header --git";
+            tree = "eza --tree --git-ignore";
             connectwifi = "sudo nmcli dev wifi connect";
             rmorig = "rm **/*.orig";
 
