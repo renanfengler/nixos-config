@@ -70,7 +70,7 @@
 
     fonts = {
         fontDir.enable = true;
-        fonts = with pkgs; [
+        packages = with pkgs; [
             siji
             (nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
         ];
