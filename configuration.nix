@@ -214,12 +214,12 @@
             lg = "lazygit";
             ly = "lg -w ~ -g ~/.local/share/yadm/repo.git";
             n = "nvim";
-            ls = "eza";
-            la = "eza -la";
-            ll = "eza --long --header --git";
-            tree = "eza --tree --git-ignore";
             connectwifi = "sudo nmcli dev wifi connect";
             rmorig = "rm **/*.orig";
+            ls = "eza --icons";
+            ll = "ls --long --header --git";
+            la = "ll -a";
+            tree = "ls --tree --git-ignore";
 
             # Kitty
             icat = "kitty +kitten icat";
