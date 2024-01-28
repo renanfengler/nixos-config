@@ -216,7 +216,7 @@
             n = "nvim";
             connectwifi = "sudo nmcli dev wifi connect";
             rmorig = "rm **/*.orig";
-            ls = "eza --icons";
+            ls = "eza --icons='always'";
             ll = "ls --long --header --git";
             la = "ll -a";
             tree = "ls --tree --git-ignore";
