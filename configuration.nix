@@ -125,6 +125,7 @@
         wofi
         xdg-desktop-portal-hyprland
         xdg-utils
+        zoxide
 
 # Git
         gh
@@ -188,6 +189,9 @@
 
             [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
             fpath+=${ZDOTDIR:-~}/.zsh_functions
+
+            eval "$(zoxide init zsh)"
+            
             export LD_LIBRARY_PATH=${pkgs.stdenv.cc.cc.lib}/lib/
         '';
         ohMyZsh = {
