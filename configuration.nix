@@ -188,6 +188,7 @@
 
             [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
             fpath+=${ZDOTDIR:-~}/.zsh_functions
+            export LD_LIBRARY_PATH=${pkgs.stdenv.cc.cc.lib}/lib/
         '';
         ohMyZsh = {
             enable = true;
