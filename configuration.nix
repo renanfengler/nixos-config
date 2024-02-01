@@ -125,7 +125,6 @@
         wofi
         xdg-desktop-portal-hyprland
         xdg-utils
-        zoxide
 
 # Git
         gh
@@ -154,6 +153,7 @@
         kitty
         tmux
         zsh-powerlevel10k
+        zoxide
 
 # Editors
         neovim
@@ -194,11 +194,11 @@
             eval "$(zoxide init zsh)"
             
             export LD_LIBRARY_PATH=${pkgs.stdenv.cc.cc.lib}/lib/
+            eval $(thefuck --alias)
         '';
         ohMyZsh = {
             enable = true;
             plugins = [
-                "autojump"
                 "colored-man-pages"
                 "copybuffer"
                 "copyfile"
@@ -213,6 +213,7 @@
                 "rust"
                 "tmux"
                 "yarn"
+                "zoxide"
             ];
         };
         shellAliases = {
@@ -254,7 +255,6 @@
         syntaxHighlighting.enable = true;
     };
 
-    programs.autojump.enable = true;
 
     programs.hyprland = {
         enable = true;
