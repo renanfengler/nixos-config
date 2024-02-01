@@ -192,8 +192,6 @@
             fpath+=${ZDOTDIR:-~}/.zsh_functions
 
             eval "$(zoxide init zsh)"
-            
-            export LD_LIBRARY_PATH=${pkgs.stdenv.cc.cc.lib}/lib/
             eval $(thefuck --alias)
         '';
         ohMyZsh = {
@@ -254,7 +252,6 @@
         };
         syntaxHighlighting.enable = true;
     };
-
 
     programs.hyprland = {
         enable = true;
