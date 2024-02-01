@@ -134,11 +134,13 @@
 
 # Linux stuff
         btrfs-progs
-        gcc
-        gcc13Stdenv
+        gcc11
+        gcc11Stdenv
+        gcc-unwrapped
+        glibc
         gnumake
-        libgccjit
-        llvmPackages_16.stdenv
+        libstdcxx5
+        llvmPackages_17.stdenv
         util-linux
 
 # Apps
@@ -211,7 +213,6 @@
                 "ripgrep"
                 "rust"
                 "tmux"
-                "yarn"
                 "zoxide"
             ];
         };
