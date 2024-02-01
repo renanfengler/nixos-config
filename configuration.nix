@@ -43,8 +43,8 @@
     networking = {
         hostName = "nixos"; # Define your hostname.
         networkmanager.enable = true;  # Easiest to use and most distros use this by default.
-        networkmanager.dns = "none";
-        nameservers = ["8.8.8.8"];
+        # networkmanager.dns = "none";
+        # nameservers = ["8.8.8.8"];
         extraHosts = ''
             127.0.0.1       localhost s3
             127.0.1.1       nixos
