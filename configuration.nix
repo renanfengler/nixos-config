@@ -151,6 +151,7 @@
 # Terminal/Shell
         gum
         kitty
+        thefuck
         tmux
         zsh-powerlevel10k
         zoxide
