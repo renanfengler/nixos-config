@@ -136,7 +136,6 @@
         btrfs-progs
         gcc11
         gcc11Stdenv
-        gcc-unwrapped
         glibc
         gnumake
         libstdcxx5
@@ -251,6 +250,7 @@
 
             mtester = "sudo mount -t ramfs none /home/renan/src/nova-arquitetura/dev-utils/data/api-tester/mysql";
             umtester = "sudo umount /home/renan/src/nova-arquitetura/dev-utils/data/api-tester/mysql";
+            stester = "rm -f /home/renan/src/nova-arquitetura/dev-utils/data/api-tester/snapshots/*";
         };
         syntaxHighlighting.enable = true;
     };
@@ -262,7 +262,12 @@
 # Permite executar binários "normais" no nix
 # https://github.com/Mic92/nix-ld
 # https://unix.stackexchange.com/questions/522822/different-methods-to-run-a-non-nixos-executable-on-nixos/522823#522823
-    programs.nix-ld.enable = true;
+    programs.nix-ld = {
+        enable = true;
+        libraries = [
+            pkgs.stdenv.cc.cc.lib
+        ];
+    };
 
 # Some programs need SUID wrappers, can be configured further or are
 # started in user sessions.
