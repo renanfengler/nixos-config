@@ -195,6 +195,8 @@
 
             eval "$(zoxide init zsh)"
             eval $(thefuck --alias)
+            export PATH="/home/renan/.local/share/fnm:$PATH"
+            eval "`fnm env`"
         '';
         ohMyZsh = {
             enable = true;
