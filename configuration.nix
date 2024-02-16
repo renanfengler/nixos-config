@@ -193,7 +193,7 @@
             [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
             fpath+=${ZDOTDIR:-~}/.zsh_functions
 
-            eval "$(zoxide init zsh)"
+            eval "$(zoxide init --cmd cd zsh)"
             eval $(thefuck --alias)
             export PATH="/home/renan/.local/share/fnm:$PATH"
             eval "`fnm env`"
