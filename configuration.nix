@@ -160,6 +160,7 @@
         neovim
 
 # Programming
+        fnm
         go
         insomnia
         lefthook
