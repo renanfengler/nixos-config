@@ -145,7 +145,6 @@
 # Apps
         anydesk
         firefox
-        librewolf
         slack
         spotify
 
