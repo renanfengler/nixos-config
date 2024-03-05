@@ -228,6 +228,7 @@
             ll = "ls --long --header --git";
             la = "ll -a";
             tree = "ls --tree --git-ignore";
+            t = "tmux";
 
             # Kitty
             icat = "kitty +kitten icat";
