@@ -143,7 +143,6 @@
         util-linux
 
 # Apps
-        anydesk
         firefox
         slack
         spotify
