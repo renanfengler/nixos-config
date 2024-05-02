@@ -144,6 +144,7 @@
 
 # Apps
         firefox
+        libreoffice
         slack
         spotify
 
