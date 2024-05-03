@@ -134,6 +134,7 @@
 
 # Linux stuff
         btrfs-progs
+        cmake
         gcc11
         gcc11Stdenv
         glibc
