@@ -156,7 +156,7 @@
         thefuck
         tmux
         zoxide
-        starship
+        zsh-powerlevel10k
 
 # Editors
         neovim
@@ -185,6 +185,7 @@
         autosuggestions.enable = true;
         interactiveShellInit = ''
             source ${pkgs.oh-my-zsh}/share/oh-my-zsh/plugins/zsh-interactive-cd/zsh-interactive-cd.plugin.zsh
+            source ${pkgs.zsh-powerlevel10k}/share/zsh-powerlevel10k/powerlevel10k.zsh-theme
 
             export PATH=$PATH:$HOME/.local/bin
             export PATH=$PATH:$HOME/.config/yarn/global/node_modules/.bin/
@@ -198,7 +199,6 @@
             eval $(thefuck --alias)
             export PATH="/home/renan/.local/share/fnm:$PATH"
             eval "`fnm env`"
-            eval "$(starship init zsh)"
         '';
         ohMyZsh = {
             enable = true;
