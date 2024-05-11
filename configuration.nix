@@ -144,7 +144,6 @@
         util-linux
 
 # Apps
-        ungoogled-chromium
         firefox
         libreoffice
         slack
