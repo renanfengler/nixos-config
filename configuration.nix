@@ -166,7 +166,6 @@
         insomnia
         lefthook
         meld
-        nodejs_20
         php82
         php82Extensions.ds
         php82Packages.composer
