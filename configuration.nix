@@ -20,6 +20,7 @@
 
     boot.kernelModules = ["uinput"];
     services = {
+        flatpak.enable = true;
         udev = {
             enable = true;
             extraRules = ''
