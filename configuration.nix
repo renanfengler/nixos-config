@@ -111,7 +111,7 @@
         hyprpaper
         imagemagick
         libnotify
-        neofetch
+        fastfetch
         pamixer # mixer para pulseaudio
         playerctl
         ripgrep
