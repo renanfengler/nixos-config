@@ -246,7 +246,7 @@
             gca = "git commit --amend --no-edit";
             yl = "yadm pull";
             yp = "yadm push";
-            git-get-task = "git log --pretty=format:\"%s\" | fzf | rg -o \"\\[.*\\]\" | xargs wl-copy";
+            git-get-task = "git log --pretty=format:\"%s\" --author=\"renan*\" | fzf | rg -o \"\\[.*\\]\" | xargs wl-copy";
 
             # Neovim
             nswap = "rm ~/.local/state/nvim/swap/*";
