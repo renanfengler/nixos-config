@@ -114,6 +114,7 @@
         fzf
         grc
         grim # for screenshots
+        gtypist
         hyprpaper
         imagemagick
         libnotify
