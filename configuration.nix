@@ -84,7 +84,6 @@
     };
 
 # Enable sound.
-    sound.enable = true;
     hardware.pulseaudio.enable = true;
 
     virtualisation.docker.enable = true;
@@ -108,7 +107,7 @@
         bat
         brightnessctl
         dunst
-        eww-wayland
+        eww
         eza
         fd
         fzf
@@ -216,10 +215,8 @@
                 "dirhistory"
                 "extract" 
                 "fancy-ctrl-z"
-                "fd"
                 "fzf"
                 "git"
-                "ripgrep"
                 "rust"
                 "tmux"
                 "zoxide"
