@@ -158,6 +158,7 @@
 
 # Terminal/Shell
         gum
+        httpie
         kitty
         thefuck
         tmux
