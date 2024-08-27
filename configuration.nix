@@ -105,10 +105,12 @@
     environment.systemPackages = with pkgs; [
 # General
         bat
+        bottom
         brightnessctl
         dunst
         eww
         eza
+        fastfetch
         fd
         fzf
         grc
@@ -117,7 +119,6 @@
         hyprpaper
         imagemagick
         libnotify
-        fastfetch
         pamixer # mixer para pulseaudio
         playerctl
         ripgrep
