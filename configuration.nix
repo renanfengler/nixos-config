@@ -174,11 +174,13 @@
         go
         insomnia
         lefthook
+        lua
         meld
-        php82
-        php82Extensions.ds
-        php82Packages.composer
+        php83
+        php83Extensions.ds
+        php83Packages.composer
         python3
+        python312Packages.pip
         rustup
         yarn
     ];
