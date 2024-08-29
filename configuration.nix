@@ -141,14 +141,36 @@
         yadm
 
 # Linux stuff
+        at-spi2-atk.out
         btrfs-progs
         cmake
+        cups.lib
+        dbus.lib
         gcc11
         gcc11Stdenv
+        glib
         glibc
+        glibc.out
         gnumake
+        gtk3.out
+        mesa.out
+        expat.out
+        libxkbcommon.out
+        alsa-lib.out
+        xorg.libxcb.out
+        xorg.libXrandr.out
+        xorg.libXfixes.out
+        xorg.libXdamage.out
+        xorg.libXext.out
+        xorg.libX11.out
+        xorg.libXcomposite.out
+        pango.out
+        cairo.out
+        libdrm.out
         libstdcxx5
         llvmPackages_17.stdenv
+        nspr.out
+        nss.out
         util-linux
 
 # Apps
@@ -278,6 +300,27 @@
         enable = true;
         libraries = [
             pkgs.stdenv.cc.cc.lib
+            pkgs.glib
+            pkgs.nss
+            pkgs.nspr
+            pkgs.at-spi2-atk
+            pkgs.cups
+            pkgs.dbus
+            pkgs.libdrm
+            pkgs.gtk3
+            pkgs.pango
+            pkgs.cairo
+            pkgs.xorg.libX11
+            pkgs.xorg.libXcomposite
+            pkgs.xorg.libXdamage
+            pkgs.xorg.libXext
+            pkgs.xorg.libXfixes
+            pkgs.xorg.libXrandr
+            pkgs.mesa
+            pkgs.expat
+            pkgs.xorg.libxcb
+            pkgs.libxkbcommon
+            pkgs.alsa-lib
         ];
     };
 
