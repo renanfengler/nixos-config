@@ -144,6 +144,7 @@
         wofi
         xdg-desktop-portal-hyprland
         xdg-utils
+        waybar
 
 # Git
         gh
@@ -152,11 +153,15 @@
         yadm
 
 # Linux stuff
+        alsa-lib.out
         at-spi2-atk.out
         btrfs-progs
+        cairo.out
         cmake
         cups.lib
         dbus.lib
+        egl-wayland
+        expat.out
         gcc11
         gcc11Stdenv
         glib
@@ -164,26 +169,22 @@
         glibc.out
         gnumake
         gtk3.out
-        mesa.out
-        expat.out
-        libxkbcommon.out
-        alsa-lib.out
-        xorg.libxcb.out
-        xorg.libXrandr.out
-        xorg.libXfixes.out
-        xorg.libXdamage.out
-        xorg.libXext.out
-        xorg.libX11.out
-        xorg.libXcomposite.out
-        pango.out
-        cairo.out
         libdrm.out
         libstdcxx5
+        libxkbcommon.out
         llvmPackages_17.stdenv
+        mesa.out
         nspr.out
         nss.out
+        pango.out
         util-linux
-        egl-wayland
+        xorg.libX11.out
+        xorg.libXcomposite.out
+        xorg.libXdamage.out
+        xorg.libXext.out
+        xorg.libXfixes.out
+        xorg.libXrandr.out
+        xorg.libxcb.out
 
 # Apps
         firefox
