@@ -45,11 +45,11 @@
             '';
         };
 
-        openvpn.servers = {
-            awiseVPN = {
-                config = '' config /home/renan/src/vpn/client.ovpn '';
-            };
-        };
+       #openvpn.servers = {
+       #    awiseVPN = {
+       #        config = '' config /home/renan/src/vpn/client.ovpn '';
+       #    };
+       #};
 
         openssh.enable = true; # Enable the OpenSSH daemon.
         printing.enable = true; # Enable CUPS to print documents.
