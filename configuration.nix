@@ -134,6 +134,7 @@
         hyprpaper
         imagemagick
         libnotify
+        p7zip
         playerctl
         pwvucontrol
         ripgrep
@@ -142,6 +143,7 @@
         sudo
         swayidle
         swaylock-effects
+        unrar
         unzip
         wget
         wl-clipboard
