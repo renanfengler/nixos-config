@@ -111,10 +111,13 @@
         };
     };
 
-    security.pam.services.swaylock = {
-        text = ''
+    security = {
+        pam.services.swaylock = {
+            text = ''
             auth include login
-        '';
+            '';
+        };
+        rtkit.enable = true;
     };
 
     environment.systemPackages = with pkgs; [
@@ -310,7 +313,9 @@
 
     programs.hyprland = {
         enable = true;
+        xwayland.enable = true;
     };
+    services.hypridle.enable = true;
 
 # Permite executar binários "normais" no nix
 # https://github.com/Mic92/nix-ld
