@@ -196,6 +196,7 @@
         xorg.libxcb.out
 
 # Apps
+        duckstation
         firefox
         libreoffice
         slack
