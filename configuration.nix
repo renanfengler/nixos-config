@@ -54,6 +54,15 @@
         acpid = {
             enable = true;
         };
+
+        pipewire = {
+            enable = true;
+            alsa = {
+                enable = true;
+                support32Bit = true;
+            };
+            pulse.enable = true;
+        };
     };
 
     networking = {
@@ -92,9 +101,6 @@
         ];
     };
 
-# Enable sound.
-    hardware.pulseaudio.enable = true;
-
     virtualisation.docker.enable = true;
 
     users = {
@@ -128,8 +134,8 @@
         hyprpaper
         imagemagick
         libnotify
-        pamixer # mixer para pulseaudio
         playerctl
+        pwvucontrol
         ripgrep
         slurp # for screenshots
         socat
