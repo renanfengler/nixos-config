@@ -148,12 +148,12 @@
         swaylock-effects
         unrar
         unzip
+        waybar
         wget
         wl-clipboard
         wofi
         xdg-desktop-portal-hyprland
         xdg-utils
-        waybar
 
 # Git
         gh
@@ -199,6 +199,7 @@
         duckstation
         firefox
         libreoffice
+        pcsx2
         slack
         spotify
 
