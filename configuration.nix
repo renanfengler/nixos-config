@@ -216,7 +216,6 @@
 # Programming
         fnm
         go
-        insomnia
         lefthook
         lua
         meld
