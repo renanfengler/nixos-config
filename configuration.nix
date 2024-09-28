@@ -8,22 +8,24 @@
     nixpkgs.config.allowUnfree = true;
     imports = [ ./hardware-configuration.nix ];
 
-    hardware.bluetooth = {
-        enable = true;
-    };
-
     nix.settings.experimental-features = ["nix-command" "flakes"];
 
-    hardware.opengl.enable = true;
-    services.xserver.videoDrivers = ["nvidia"];
-    hardware.nvidia = {
-        modesetting.enable = true;
-        powerManagement.enable = false;
-        powerManagement.finegrained = false;
-        open = false;
-        nvidiaSettings = true;
-        package = config.boot.kernelPackages.nvidiaPackages.stable;
+    hardware = {
+        bluetooth = {
+            enable = true;
+        };
+        graphics.enable = true;
+        nvidia = {
+            modesetting.enable = true;
+            powerManagement.enable = false;
+            powerManagement.finegrained = false;
+            open = false;
+            nvidiaSettings = true;
+            package = config.boot.kernelPackages.nvidiaPackages.stable;
+        };
     };
+
+    services.xserver.videoDrivers = ["nvidia"];
 
 # Use the systemd-boot EFI boot loader.
     boot.loader.systemd-boot.enable = true;
@@ -37,7 +39,9 @@
                 "25 12 * * * docker exec nova-arquitetura-subscriptions-api-1 sh -c \"bin/console subscriptions:cancel-subscription\""
             ];
         };
+
         flatpak.enable = true;
+
         udev = {
             enable = true;
             extraRules = ''
@@ -45,14 +49,8 @@
             '';
         };
 
-       #openvpn.servers = {
-       #    awiseVPN = {
-       #        config = '' config /home/renan/src/vpn/client.ovpn '';
-       #    };
-       #};
+        openssh.enable = true;
 
-        openssh.enable = true; # Enable the OpenSSH daemon.
-        printing.enable = true; # Enable CUPS to print documents.
         acpid = {
             enable = true;
         };
