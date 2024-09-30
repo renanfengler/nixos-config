@@ -199,6 +199,7 @@
 # Apps
         duckstation
         firefox
+        heroic-unwrapped
         libreoffice
         pcsx2
         slack
