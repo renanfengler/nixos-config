@@ -134,6 +134,7 @@
         grc
         grim # for screenshots
         gtypist
+        hyprcursor
         hyprpaper
         imagemagick
         libnotify
