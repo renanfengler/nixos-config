@@ -71,9 +71,8 @@
         # networkmanager.dns = "none";
         # nameservers = ["8.8.8.8"];
         extraHosts = ''
-            127.0.0.1       localhost s3
+            127.0.0.1       localhost
             127.0.1.1       nixos
-            52.216.62.232   s3.amazonaws.com
         '';
     };
 
@@ -120,6 +119,7 @@
         rtkit.enable = true;
     };
 
+    # $ nix search <package name>
     environment.systemPackages = with pkgs; [
 # General
         bat
