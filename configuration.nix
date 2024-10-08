@@ -153,7 +153,6 @@
         wget
         wl-clipboard
         wofi
-        xdg-desktop-portal-hyprland
         xdg-utils
 
 # Git
