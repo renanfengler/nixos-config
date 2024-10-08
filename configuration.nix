@@ -200,7 +200,6 @@
         dsda-doom
         firefox
         heroic-unwrapped
-        libreoffice
         pcsx2
         qbittorrent
         slack
