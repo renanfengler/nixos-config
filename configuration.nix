@@ -197,6 +197,7 @@
 
 # Apps
         duckstation
+        dsda-doom
         firefox
         heroic-unwrapped
         libreoffice
