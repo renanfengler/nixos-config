@@ -306,11 +306,6 @@
             dps = "docker compose ps";
             dcup = "docker compose up -d";
             ddown = " docker compose down";
-            testerdown = "docker compose -p api-tester down";
-
-            mtester = "sudo mount -t ramfs none /home/renan/src/nova-arquitetura/dev-utils/data/api-tester/mysql";
-            umtester = "sudo umount /home/renan/src/nova-arquitetura/dev-utils/data/api-tester/mysql";
-            stester = "rm -f /home/renan/src/nova-arquitetura/dev-utils/data/api-tester/snapshots/*";
         };
         syntaxHighlighting.enable = true;
     };
