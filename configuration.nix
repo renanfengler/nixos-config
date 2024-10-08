@@ -200,6 +200,7 @@
         dsda-doom
         firefox
         heroic-unwrapped
+        mpv
         pcsx2
         qbittorrent
         slack
