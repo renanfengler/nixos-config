@@ -210,10 +210,10 @@
         gum
         httpie
         kitty
+        oh-my-posh
         thefuck
         tmux
         zoxide
-        zsh-powerlevel10k
 
 # Editors
         neovim
@@ -241,15 +241,11 @@
         enable = true;
         autosuggestions.enable = true;
         interactiveShellInit = ''
-            source ${pkgs.oh-my-zsh}/share/oh-my-zsh/plugins/zsh-interactive-cd/zsh-interactive-cd.plugin.zsh
-            source ${pkgs.zsh-powerlevel10k}/share/zsh-powerlevel10k/powerlevel10k.zsh-theme
-
             export PATH=$PATH:$HOME/.local/bin
             export PATH=$PATH:$HOME/.config/yarn/global/node_modules/.bin/
             export PATH=$PATH:$HOME/.cargo/bin/
             export PATH=$PATH:$HOME/go/bin/
 
-            [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
             fpath+=${ZDOTDIR:-~}/.zsh_functions
 
             eval "$(zoxide init --cmd cd zsh)"
@@ -265,7 +261,7 @@
                 "copyfile"
                 "copypath"
                 "dirhistory"
-                "extract" 
+                "extract"
                 "fancy-ctrl-z"
                 "fzf"
                 "git"
