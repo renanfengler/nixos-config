@@ -141,6 +141,7 @@
         libnotify
         p7zip
         playerctl
+        pyprland
         pwvucontrol
         ripgrep
         slurp # for screenshots
