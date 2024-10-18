@@ -205,7 +205,6 @@
         mpv
         pcsx2
         qbittorrent
-        slack
         spotify
 
 # Terminal/Shell
