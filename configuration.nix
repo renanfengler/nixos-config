@@ -125,6 +125,7 @@
         bat
         bottom
         brightnessctl
+        du-dust
         dunst
         eww
         eza
