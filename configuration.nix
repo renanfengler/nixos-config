@@ -156,8 +156,6 @@
         slurp # for screenshots
         socat
         sudo
-        swayidle
-        swaylock-effects
         unrar
         unzip
         waybar
@@ -260,7 +258,7 @@
 
             eval "$(zoxide init --cmd cd zsh)"
             eval $(thefuck --alias)
-            export PATH="/home/renan/.local/share/fnm:$PATH"
+            export PATH="$HOME/.local/share/fnm:$PATH"
             eval "`fnm env`"
         '';
         ohMyZsh = {
