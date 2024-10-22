@@ -2,13 +2,22 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running `nixos-help`).
 
-{ config, pkgs, lib, ... }:
+{ config, pkgs, ... }:
 
 {
     nixpkgs.config.allowUnfree = true;
     imports = [ ./hardware-configuration.nix ];
 
     nix.settings.experimental-features = ["nix-command" "flakes"];
+
+    fileSystems."/mnt/externo" = {
+        device = "/dev/sdc1";
+        fsType = "ntfs";
+        options = [
+            "users"
+            "nofail"
+        ];
+    };
 
     hardware = {
         bluetooth = {
