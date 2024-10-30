@@ -230,6 +230,7 @@
 # Apps
         duckstation
         dsda-doom
+        gzdoom
         firefox
         heroic-unwrapped
         mpv
