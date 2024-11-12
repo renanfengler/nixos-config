@@ -67,9 +67,7 @@
     services = {
         cron = {
             enable = true;
-            systemCronJobs = [
-                "25 12 * * * docker exec nova-arquitetura-subscriptions-api-1 sh -c \"bin/console subscriptions:cancel-subscription\""
-            ];
+            systemCronJobs = [ ];
         };
 
         flatpak.enable = true;
