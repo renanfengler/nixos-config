@@ -143,7 +143,7 @@
     security = {
         pam.services.swaylock = {
             text = ''
-            auth include login
+                auth include login
             '';
         };
         rtkit.enable = true;
@@ -209,7 +209,6 @@
         gnumake
         gtk3.out
         libdrm.out
-        libstdcxx5
         libxkbcommon.out
         llvmPackages_17.stdenv
         mesa.out
