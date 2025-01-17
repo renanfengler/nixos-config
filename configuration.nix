@@ -126,7 +126,7 @@
         fontDir.enable = true;
         packages = with pkgs; [
             siji
-            (nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
+            nerd-fonts.dejavu-sans-mono
         ];
     };
 
