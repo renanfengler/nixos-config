@@ -192,37 +192,15 @@
         yadm
 
 # Linux stuff
-        alsa-lib.out
-        at-spi2-atk.out
-        btrfs-progs
-        cairo.out
         cmake
-        cups.lib
-        dbus.lib
         egl-wayland
-        expat.out
         gcc11
         gcc11Stdenv
-        glib
         glibc
         glibc.out
         gnumake
-        gtk3.out
-        libdrm.out
-        libxkbcommon.out
         llvmPackages_17.stdenv
-        mesa.out
-        nspr.out
-        nss.out
-        pango.out
         util-linux
-        xorg.libX11.out
-        xorg.libXcomposite.out
-        xorg.libXdamage.out
-        xorg.libXext.out
-        xorg.libXfixes.out
-        xorg.libXrandr.out
-        xorg.libxcb.out
 
 # Apps
         duckstation
@@ -348,27 +326,6 @@
         enable = true;
         libraries = [
             pkgs.stdenv.cc.cc.lib
-            pkgs.glib
-            pkgs.nss
-            pkgs.nspr
-            pkgs.at-spi2-atk
-            pkgs.cups
-            pkgs.dbus
-            pkgs.libdrm
-            pkgs.gtk3
-            pkgs.pango
-            pkgs.cairo
-            pkgs.xorg.libX11
-            pkgs.xorg.libXcomposite
-            pkgs.xorg.libXdamage
-            pkgs.xorg.libXext
-            pkgs.xorg.libXfixes
-            pkgs.xorg.libXrandr
-            pkgs.mesa
-            pkgs.expat
-            pkgs.xorg.libxcb
-            pkgs.libxkbcommon
-            pkgs.alsa-lib
         ];
     };
 
