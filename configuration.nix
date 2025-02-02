@@ -30,16 +30,26 @@
             powerManagement.finegrained = false;
             open = false;
             nvidiaSettings = true;
-            package = config.boot.kernelPackages.nvidiaPackages.latest;
-            # package = config.boot.kernelPackages.nvidiaPackages.mkDriver {
-            #     # Igual ao production
-            #     version = "550.142";
-            #     sha256_64bit = "sha256-bdVJivBLQtlSU7Zre9oVCeAbAk0s10WYPU3Sn+sXkqE=";
-            #     sha256_aarch64 = "sha256-sBp5fcCPMrfrTZTF1FqKo9g0wOWP+5+wOwQ7PLWI6wA=";
-            #     openSha256 = "sha256-hjpwTR4I0MM5dEjQn7MKM3RY1a4Mt6a61Ii9KW2KbiY=";
-            #     settingsSha256 = "sha256-Wk6IlVvs23cB4s0aMeZzSvbOQqB1RnxGMv3HkKBoIgY=";
-            #     persistencedSha256 = "sha256-yQFrVk4i2dwReN0XoplkJ++iA1WFhnIkP7ns4ORmkFA=";
-            # };
+
+            # package = config.boot.kernelPackages.nvidiaPackages.latest;
+            # latest (01/02/2025)
+            package = config.boot.kernelPackages.nvidiaPackages.mkDriver {
+                version = "565.77";
+                sha256_64bit = "sha256-CnqnQsRrzzTXZpgkAtF7PbH9s7wbiTRNcM0SPByzFHw=";
+                sha256_aarch64 = "sha256-LSAYUnhfnK3rcuPe1dixOwAujSof19kNOfdRHE7bToE=";
+                openSha256 = "sha256-Fxo0t61KQDs71YA8u7arY+503wkAc1foaa51vi2Pl5I=";
+                settingsSha256 = "sha256-VUetj3LlOSz/LB+DDfMCN34uA4bNTTpjDrb6C6Iwukk=";
+                persistencedSha256 = "sha256-wnDjC099D8d9NJSp9D0CbsL+vfHXyJFYYgU3CwcqKww=";
+                patches = [
+                    ./fix-for-linux-6.13.patch
+                ];
+                patchesOpen = [
+                    ./nvidia-nv-Convert-symbol-namespace-to-string-literal.patch
+                    ./crypto-Add-fix-for-6.13-Module-compilation.patch
+                    ./Use-linux-aperture.c-for-removing-conflict.patch
+                    ./TTM-fbdev-emulation-for-Linux-6.13.patch
+                ];
+            };
         };
     };
 
