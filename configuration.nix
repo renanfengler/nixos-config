@@ -192,6 +192,7 @@
         duckstation
         dsda-doom
         gzdoom
+        godot_4
         firefox
         heroic-unwrapped
         mpv
