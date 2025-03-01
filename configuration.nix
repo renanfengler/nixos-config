@@ -163,12 +163,13 @@
         gtypist
         hyprcursor
         hyprpaper
+        hyprsome
         imagemagick
         libnotify
         p7zip
         playerctl
-        pyprland
         pwvucontrol
+        pyprland
         ripgrep
         slurp # for screenshots
         socat
@@ -199,11 +200,11 @@
         util-linux
 
 # Apps
-        duckstation
         dsda-doom
-        gzdoom
-        godot_4
+        duckstation
         firefox
+        godot_4
+        gzdoom
         heroic-unwrapped
         mpv
         pcsx2
