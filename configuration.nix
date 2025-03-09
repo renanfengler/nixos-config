@@ -204,7 +204,6 @@
         duckstation
         firefox
         godot_4
-        gzdoom
         heroic-unwrapped
         mpv
         pcsx2
