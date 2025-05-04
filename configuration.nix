@@ -287,6 +287,7 @@
             la = "ll -a";
             tree = "ls --tree --git-ignore";
             t = "tmux";
+            H = "Hyprland";
 
             # Kitty
             icat = "kitty +kitten icat";
