@@ -23,37 +23,8 @@
         bluetooth = {
             enable = true;
         };
-        graphics.enable = true;
-        nvidia = {
-            modesetting.enable = true;
-            powerManagement.enable = false;
-            powerManagement.finegrained = false;
-            open = false;
-            nvidiaSettings = true;
-
-            # package = config.boot.kernelPackages.nvidiaPackages.latest;
-            # latest (01/02/2025)
-            package = config.boot.kernelPackages.nvidiaPackages.mkDriver {
-                version = "565.77";
-                sha256_64bit = "sha256-CnqnQsRrzzTXZpgkAtF7PbH9s7wbiTRNcM0SPByzFHw=";
-                sha256_aarch64 = "sha256-LSAYUnhfnK3rcuPe1dixOwAujSof19kNOfdRHE7bToE=";
-                openSha256 = "sha256-Fxo0t61KQDs71YA8u7arY+503wkAc1foaa51vi2Pl5I=";
-                settingsSha256 = "sha256-VUetj3LlOSz/LB+DDfMCN34uA4bNTTpjDrb6C6Iwukk=";
-                persistencedSha256 = "sha256-wnDjC099D8d9NJSp9D0CbsL+vfHXyJFYYgU3CwcqKww=";
-                patches = [
-                    ./fix-for-linux-6.13.patch
-                ];
-                patchesOpen = [
-                    ./nvidia-nv-Convert-symbol-namespace-to-string-literal.patch
-                    ./crypto-Add-fix-for-6.13-Module-compilation.patch
-                    ./Use-linux-aperture.c-for-removing-conflict.patch
-                    ./TTM-fbdev-emulation-for-Linux-6.13.patch
-                ];
-            };
-        };
     };
-
-    services.xserver.videoDrivers = ["nvidia"];
+    environment.sessionVariables = { LIBVA_DRIVER_NAME = "iHD"; };
 
 # Use the systemd-boot EFI boot loader.
     boot.loader.systemd-boot.enable = true;
@@ -88,6 +59,26 @@
                 support32Bit = true;
             };
             pulse.enable = true;
+        };
+
+        tlp = {
+            enable = true;
+            settings = {
+                CPU_SCALING_GOVERNOR_ON_AC = "performance";
+                CPU_SCALING_GOVERNOR_ON_BAT = "powersave";
+
+                CPU_ENERGY_PERF_POLICY_ON_BAT = "power";
+                CPU_ENERGY_PERF_POLICY_ON_AC = "performance";
+
+                CPU_MIN_PERF_ON_AC = 0;
+                CPU_MAX_PERF_ON_AC = 100;
+                CPU_MIN_PERF_ON_BAT = 0;
+                CPU_MAX_PERF_ON_BAT = 40;
+
+                #Optional helps save long term battery health
+                START_CHARGE_THRESH_BAT0 = 40; # 40 and bellow it starts to charge
+                STOP_CHARGE_THRESH_BAT0 = 80; # 80 and above it stops charging
+            };
         };
     };
 
@@ -200,13 +191,8 @@
         util-linux
 
 # Apps
-        dsda-doom
-        duckstation
         firefox
-        godot_4
-        heroic-unwrapped
         mpv
-        pcsx2
         qbittorrent
         spotify
 
@@ -325,10 +311,6 @@
         libraries = [
             pkgs.stdenv.cc.cc.lib
         ];
-    };
-
-    programs.steam = {
-        enable = true;
     };
 
 # Some programs need SUID wrappers, can be configured further or are
