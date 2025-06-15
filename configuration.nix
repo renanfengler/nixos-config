@@ -222,6 +222,7 @@
         neovim
 
 # Programming
+        atlas
         fnm
         go
         lefthook
