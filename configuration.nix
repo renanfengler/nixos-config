@@ -215,7 +215,6 @@
         httpie
         kitty
         oh-my-posh
-        thefuck
         tmux
         zoxide
 
@@ -254,7 +253,6 @@
             fpath+=${ZDOTDIR:-~}/.zsh_functions
 
             eval "$(zoxide init --cmd cd zsh)"
-            eval $(thefuck --alias)
             export PATH="$HOME/.local/share/fnm:$PATH"
             eval "`fnm env`"
         '';
