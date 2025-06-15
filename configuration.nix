@@ -223,6 +223,7 @@
 
 # Programming
         atlas
+        cargo
         fnm
         go
         lefthook
