@@ -78,9 +78,17 @@
                 #Optional helps save long term battery health
                 START_CHARGE_THRESH_BAT0 = 40; # 40 and bellow it starts to charge
                 STOP_CHARGE_THRESH_BAT0 = 80; # 80 and above it stops charging
+
+                CPU_BOOST_ON_AC = 1;
+                CPU_BOOST_ON_BAT = 0;
             };
         };
+
+        system76-scheduler.settings.cfsProfiles.enable = true;
+
+        thermald.enable = true;
     };
+    powerManagement.powertop.enable = true;
 
     networking = {
         hostName = "nixos"; # Define your hostname.
