@@ -23,12 +23,18 @@
         bluetooth = {
             enable = true;
         };
-        graphics.enable = true;
+        graphics = {
+            enable = true;
+            enable32Bit = true;
+            extraPackages = with pkgs; [
+                rocmPackages.clr
+            ];
+        };
         nvidia = {
             modesetting.enable = true;
             powerManagement.enable = false;
             powerManagement.finegrained = false;
-            open = false;
+            open = true;
             nvidiaSettings = true;
 
             # package = config.boot.kernelPackages.nvidiaPackages.latest;
@@ -55,7 +61,10 @@
 
     services.xserver.videoDrivers = ["nvidia"];
 
-# Use the systemd-boot EFI boot loader.
+    boot.initrd.kernelModules = [ "nvidia" ];
+    boot.blacklistedKernelModules = ["nouveau"];
+
+    # Use the systemd-boot EFI boot loader.
     boot.loader.systemd-boot.enable = true;
     boot.loader.efi.canTouchEfiVariables = true;
 
@@ -195,6 +204,8 @@
         gcc11Stdenv
         glibc
         glibc.out
+        libGL
+        libGL.out
         gnumake
         llvmPackages_17.stdenv
         util-linux
@@ -208,6 +219,7 @@
         mpv
         pcsx2
         qbittorrent
+        rpcs3
         spotify
 
 # Terminal/Shell
@@ -324,6 +336,8 @@
         enable = true;
         libraries = [
             pkgs.stdenv.cc.cc.lib
+            pkgs.glibc
+            pkgs.libGL
         ];
     };
 
