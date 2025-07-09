@@ -214,12 +214,10 @@
         dsda-doom
         duckstation
         firefox
-        godot_4
         heroic-unwrapped
         mpv
         pcsx2
         qbittorrent
-        rpcs3
         spotify
 
 # Terminal/Shell
