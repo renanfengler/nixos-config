@@ -298,6 +298,7 @@
             tree = "ls --tree --git-ignore";
             t = "tmux";
             H = "Hyprland";
+            nnix = "nvim /etc/nixos/configuration.nix";
 
             # Kitty
             icat = "kitty +kitten icat";
