@@ -166,6 +166,7 @@
         dunst
         eww
         eza
+        evince
         fastfetch
         fd
         fzf
