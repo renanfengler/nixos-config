@@ -26,9 +26,9 @@
         graphics = {
             enable = true;
             enable32Bit = true;
-            extraPackages = with pkgs; [
-                rocmPackages.clr
-            ];
+            # extraPackages = with pkgs; [
+            #     rocmPackages.clr
+            # ];
         };
         nvidia = {
             modesetting.enable = true;
@@ -151,6 +151,8 @@
                 auth include login
             '';
         };
+
+        # Veio da página do pipewire do nixos
         rtkit.enable = true;
     };
 
