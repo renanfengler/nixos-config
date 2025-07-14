@@ -150,6 +150,7 @@
         bat
         bottom
         brightnessctl
+        calc
         du-dust
         dunst
         eww
@@ -282,6 +283,8 @@
             tree = "ls --tree --git-ignore";
             t = "tmux";
             H = "Hyprland";
+            nalias = "nvim ~/.zsh_aliases";
+            nnix = "nvim /etc/nixos/configuration.nix";
 
             # Kitty
             icat = "kitty +kitten icat";
