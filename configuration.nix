@@ -165,7 +165,6 @@
         calc
         du-dust
         dunst
-        eww
         eza
         evince
         fastfetch
@@ -204,8 +203,8 @@
 # Linux stuff
         cmake
         egl-wayland
-        gcc11
-        gcc11Stdenv
+        # gcc11
+        # gcc11Stdenv
         glibc
         glibc.out
         libGL
@@ -213,10 +212,10 @@
         gnumake
         llvmPackages_17.stdenv
         util-linux
+        wine-wayland
 
 # Apps
         dsda-doom
-        duckstation
         firefox
         heroic-unwrapped
         mpv
