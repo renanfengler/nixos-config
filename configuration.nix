@@ -37,25 +37,25 @@
             open = true;
             nvidiaSettings = true;
 
-            # package = config.boot.kernelPackages.nvidiaPackages.latest;
-            # latest (01/02/2025)
-            package = config.boot.kernelPackages.nvidiaPackages.mkDriver {
-                version = "565.77";
-                sha256_64bit = "sha256-CnqnQsRrzzTXZpgkAtF7PbH9s7wbiTRNcM0SPByzFHw=";
-                sha256_aarch64 = "sha256-LSAYUnhfnK3rcuPe1dixOwAujSof19kNOfdRHE7bToE=";
-                openSha256 = "sha256-Fxo0t61KQDs71YA8u7arY+503wkAc1foaa51vi2Pl5I=";
-                settingsSha256 = "sha256-VUetj3LlOSz/LB+DDfMCN34uA4bNTTpjDrb6C6Iwukk=";
-                persistencedSha256 = "sha256-wnDjC099D8d9NJSp9D0CbsL+vfHXyJFYYgU3CwcqKww=";
-                patches = [
-                    ./fix-for-linux-6.13.patch
-                ];
-                patchesOpen = [
-                    ./nvidia-nv-Convert-symbol-namespace-to-string-literal.patch
-                    ./crypto-Add-fix-for-6.13-Module-compilation.patch
-                    ./Use-linux-aperture.c-for-removing-conflict.patch
-                    ./TTM-fbdev-emulation-for-Linux-6.13.patch
-                ];
-            };
+            package = config.boot.kernelPackages.nvidiaPackages.production;
+            # production (22/09/2025)
+            # package = config.boot.kernelPackages.nvidiaPackages.mkDriver {
+            #     version = "580.82.09";
+            #     sha256_64bit = "sha256-Puz4MtouFeDgmsNMKdLHoDgDGC+QRXh6NVysvltWlbc=";
+            #     sha256_aarch64 = "sha256-6tHiAci9iDTKqKrDIjObeFdtrlEwjxOHJpHfX4GMEGQ=";
+            #     openSha256 = "sha256-YB+mQD+oEDIIDa+e8KX1/qOlQvZMNKFrI5z3CoVKUjs=";
+            #     settingsSha256 = "sha256-um53cr2Xo90VhZM1bM2CH4q9b/1W2YOqUcvXPV6uw2s=";
+            #     persistencedSha256 = "sha256-lbYSa97aZ+k0CISoSxOMLyyMX//Zg2Raym6BC4COipU=";
+            #     patches = [
+            #         ./fix-for-linux-6.13.patch
+            #     ];
+            #     patchesOpen = [
+            #         ./nvidia-nv-Convert-symbol-namespace-to-string-literal.patch
+            #         ./crypto-Add-fix-for-6.13-Module-compilation.patch
+            #         ./Use-linux-aperture.c-for-removing-conflict.patch
+            #         ./TTM-fbdev-emulation-for-Linux-6.13.patch
+            #     ];
+            # };
         };
     };
 
@@ -97,6 +97,9 @@
                 support32Bit = true;
             };
             pulse.enable = true;
+            wireplumber = {
+                enable = true;
+            };
         };
     };
 
@@ -160,13 +163,13 @@
     environment.systemPackages = with pkgs; [
 # General
         bat
+        bc
         bottom
         brightnessctl
-        calc
         du-dust
         dunst
+        evince # pdf reader
         eza
-        evince
         fastfetch
         fd
         fzf
@@ -201,16 +204,16 @@
         yadm
 
 # Linux stuff
+        at
         cmake
         egl-wayland
-        # gcc11
-        # gcc11Stdenv
+        gcc
+        gccStdenv
         glibc
         glibc.out
         libGL
         libGL.out
         gnumake
-        llvmPackages_17.stdenv
         util-linux
         wine-wayland
 
@@ -301,8 +304,6 @@
             tree = "ls --tree --git-ignore";
             t = "tmux";
             H = "Hyprland";
-
-            nalias = "nvim ~/.zsh_aliases";
             nnix = "nvim /etc/nixos/configuration.nix";
 
             # Kitty
