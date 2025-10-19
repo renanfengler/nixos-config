@@ -186,6 +186,7 @@
         pwvucontrol
         pyprland
         ripgrep
+        rofi
         slurp # for screenshots
         socat
         sudo
