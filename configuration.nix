@@ -195,7 +195,6 @@
         waybar
         wget
         wl-clipboard
-        wofi
         xdg-utils
 
 # Git
