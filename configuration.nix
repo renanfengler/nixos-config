@@ -193,6 +193,7 @@
         unrar
         unzip
         waybar
+        wev
         wget
         wl-clipboard
         xdg-utils
