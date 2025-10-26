@@ -176,9 +176,6 @@
         grc
         grim # for screenshots
         gtypist
-        hyprcursor
-        hyprpaper
-        hyprsome
         imagemagick
         libnotify
         p7zip
@@ -187,6 +184,7 @@
         pyprland
         ripgrep
         rofi
+        libqalculate # calculator
         slurp # for screenshots
         socat
         sudo
@@ -197,6 +195,14 @@
         wget
         wl-clipboard
         xdg-utils
+        yazi
+
+#Hyprland stuff
+        hyprcursor
+        hyprpanel
+        # hyprpaper
+        # hyprsome
+        hyprsunset
 
 # Git
         gh
