@@ -71,11 +71,11 @@
     boot.kernelModules = ["uinput"];
     services = {
         cron = {
-            enable = true;
+            enable = false;
             systemCronJobs = [ ];
         };
 
-        flatpak.enable = true;
+        flatpak.enable = false;
 
         udev = {
             enable = true;
