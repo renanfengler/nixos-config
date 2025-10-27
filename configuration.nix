@@ -198,10 +198,11 @@
         yazi
 
 #Hyprland stuff
-        hyprcursor
-        hyprpanel
         # hyprpaper
         # hyprsome
+        hyprcursor
+        hyprlock
+        hyprpanel
         hyprsunset
 
 # Git
