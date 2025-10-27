@@ -61,14 +61,18 @@
 
     services.xserver.videoDrivers = ["nvidia"];
 
-    boot.initrd.kernelModules = [ "nvidia" ];
-    boot.blacklistedKernelModules = ["nouveau"];
+    boot = {
+        initrd.kernelModules = [ "nvidia" ];
+        blacklistedKernelModules = ["nouveau"];
 
-    # Use the systemd-boot EFI boot loader.
-    boot.loader.systemd-boot.enable = true;
-    boot.loader.efi.canTouchEfiVariables = true;
+        # Use the systemd-boot EFI boot loader.
+        loader.systemd-boot.enable = true;
+        loader.efi.canTouchEfiVariables = true;
 
-    boot.kernelModules = ["uinput"];
+        kernelModules = ["uinput"];
+        kernelPackages = pkgs.linuxPackages_zen;
+    };
+
     services = {
         cron = {
             enable = false;
