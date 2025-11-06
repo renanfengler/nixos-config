@@ -170,7 +170,7 @@
         bc
         bottom
         brightnessctl
-        du-dust
+        dust
         dunst
         evince # pdf reader
         eza
@@ -285,6 +285,7 @@
             eval "$(zoxide init --cmd cd zsh)"
             export PATH="$HOME/.local/share/fnm:$PATH"
             eval "`fnm env`"
+            eval "$(oh-my-posh init zsh --config ~/.config/oh-my-posh/main.toml)"
         '';
         ohMyZsh = {
             enable = true;
