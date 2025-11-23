@@ -170,6 +170,7 @@
         bc
         bottom
         brightnessctl
+        cliphist
         dust
         dunst
         evince # pdf reader
