@@ -139,6 +139,7 @@
         packages = with pkgs; [
             siji
             nerd-fonts.dejavu-sans-mono
+            nerd-fonts.geist-mono
         ];
     };
 
