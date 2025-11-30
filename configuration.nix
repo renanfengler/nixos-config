@@ -194,6 +194,7 @@
         slurp # for screenshots
         socat
         sudo
+        swww
         unrar
         unzip
         waybar
