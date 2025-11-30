@@ -278,7 +278,7 @@
         enable = true;
         autosuggestions.enable = true;
         interactiveShellInit = ''
-            bindkeys -v
+            bindkey -v
             export PATH=$PATH:$HOME/.local/bin
             export PATH=$PATH:$HOME/.config/yarn/global/node_modules/.bin/
             export PATH=$PATH:$HOME/.cargo/bin/
