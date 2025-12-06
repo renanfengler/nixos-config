@@ -195,6 +195,7 @@
         socat
         sudo
         swww
+        tealdeer
         unrar
         unzip
         waybar
