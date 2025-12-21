@@ -352,7 +352,7 @@
             nnix = "nvim /etc/nixos/configuration.nix";
 
             # Kitty
-            icat = "kitty +kitten icat";
+            icat = "kitty +icat";
             s = "kitty +kitten ssh";
 
             #Git
