@@ -131,6 +131,10 @@
                 enable = true;
             };
         };
+
+        ratbagd = {
+            enable = true;
+        };
     };
 
     networking = {
