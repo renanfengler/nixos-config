@@ -313,7 +313,7 @@
         interactiveShellInit = ''
             bindkey -v
             export PATH=$PATH:$HOME/.local/bin
-            export PATH=$PATH:$HOME/.config/yarn/global/node_modules/.bin/
+            export PATH=$PATH:$HOME/.yarn/bin/
             export PATH=$PATH:$HOME/.cargo/bin/
             export PATH=$PATH:$HOME/go/bin/
 
