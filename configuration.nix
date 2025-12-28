@@ -233,6 +233,7 @@
         wget
         wl-clipboard
         xdg-utils
+        xremap
         yazi
 
 #Hyprland stuff
