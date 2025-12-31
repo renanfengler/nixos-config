@@ -266,7 +266,6 @@
 
 # Apps
         dsda-doom
-        duckstation
         firefox
         heroic-unwrapped
         mpv
