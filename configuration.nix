@@ -64,11 +64,11 @@
     boot = {
         plymouth = {
             enable = true;
-            theme = "circle_alt";
+            theme = "spin";
             themePackages = with pkgs; [
                 # By default we would install all themes
                 (adi1090x-plymouth-themes.override {
-                    selected_themes = [ "circle_alt" ];
+                    selected_themes = [ "spin" ];
                 })
             ];
         };
