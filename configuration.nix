@@ -213,6 +213,7 @@
         grim # for screenshots
         gtypist
         imagemagick
+        jq
         libnotify
         p7zip
         playerctl
