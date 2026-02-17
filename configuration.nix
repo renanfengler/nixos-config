@@ -243,6 +243,7 @@
         hyprcursor
         hyprlock
         hyprpanel
+        hyprpolkitagent
         hyprsunset
 
 # Git
