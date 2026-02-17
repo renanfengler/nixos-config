@@ -360,7 +360,7 @@
             la = "ll -a";
             tree = "ls --tree --git-ignore";
             t = "tmux";
-            H = "Hyprland";
+            H = "start-hyprland";
             nnix = "nvim /etc/nixos/configuration.nix";
 
             # Kitty
