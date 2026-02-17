@@ -263,6 +263,7 @@
         libGL
         libGL.out
         gnumake
+        SDL2
         util-linux
         wine-wayland
 
@@ -273,6 +274,7 @@
         mpv
         pcsx2
         qbittorrent
+        rpcs3
         spotify
         uzdoom
 
@@ -328,8 +330,8 @@
 
             export DOOM_WAD=$HOME/doom/iwads/DOOM.WAD
             export DOOM2_WAD=$HOME/doom/iwads/DOOM2.WAD
-            export PLUTONIA_WAD=$HOME/doom/iwads/PLUTONIA_WAD
-            export TNT_WAD=$HOME/doom/iwads/TNT_WAD
+            export PLUTONIA_WAD=$HOME/doom/iwads/PLUTONIA.WAD
+            export TNT_WAD=$HOME/doom/iwads/TNT.WAD
         '';
         ohMyZsh = {
             enable = true;
