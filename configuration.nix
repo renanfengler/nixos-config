@@ -325,6 +325,11 @@
             export PATH="$HOME/.local/share/fnm:$PATH"
             eval "`fnm env`"
             eval "$(oh-my-posh init zsh --config ~/.config/oh-my-posh/main.toml)"
+
+            export DOOM_WAD=$HOME/doom/iwads/DOOM.WAD
+            export DOOM2_WAD=$HOME/doom/iwads/DOOM2.WAD
+            export PLUTONIA_WAD=$HOME/doom/iwads/PLUTONIA_WAD
+            export TNT_WAD=$HOME/doom/iwads/TNT_WAD
         '';
         ohMyZsh = {
             enable = true;
