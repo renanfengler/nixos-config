@@ -274,6 +274,7 @@
         pcsx2
         qbittorrent
         spotify
+        uzdoom
 
 # Terminal/Shell
         gum
