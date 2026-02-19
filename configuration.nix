@@ -26,40 +26,8 @@
         graphics = {
             enable = true;
             enable32Bit = true;
-            # extraPackages = with pkgs; [
-            #     rocmPackages.clr
-            # ];
-        };
-        nvidia = {
-            modesetting.enable = true;
-            powerManagement.enable = false;
-            powerManagement.finegrained = false;
-            open = true;
-            nvidiaSettings = true;
-
-            package = config.boot.kernelPackages.nvidiaPackages.production;
-            # production (22/09/2025)
-            # package = config.boot.kernelPackages.nvidiaPackages.mkDriver {
-            #     version = "580.82.09";
-            #     sha256_64bit = "sha256-Puz4MtouFeDgmsNMKdLHoDgDGC+QRXh6NVysvltWlbc=";
-            #     sha256_aarch64 = "sha256-6tHiAci9iDTKqKrDIjObeFdtrlEwjxOHJpHfX4GMEGQ=";
-            #     openSha256 = "sha256-YB+mQD+oEDIIDa+e8KX1/qOlQvZMNKFrI5z3CoVKUjs=";
-            #     settingsSha256 = "sha256-um53cr2Xo90VhZM1bM2CH4q9b/1W2YOqUcvXPV6uw2s=";
-            #     persistencedSha256 = "sha256-lbYSa97aZ+k0CISoSxOMLyyMX//Zg2Raym6BC4COipU=";
-            #     patches = [
-            #         ./fix-for-linux-6.13.patch
-            #     ];
-            #     patchesOpen = [
-            #         ./nvidia-nv-Convert-symbol-namespace-to-string-literal.patch
-            #         ./crypto-Add-fix-for-6.13-Module-compilation.patch
-            #         ./Use-linux-aperture.c-for-removing-conflict.patch
-            #         ./TTM-fbdev-emulation-for-Linux-6.13.patch
-            #     ];
-            # };
         };
     };
-
-    services.xserver.videoDrivers = ["nvidia"];
 
     boot = {
         plymouth = {
@@ -87,9 +55,6 @@
         # It's still possible to open the bootloader list by pressing any key
         # It will just not appear on screen unless a key is pressed
         loader.timeout = 0;
-
-        initrd.kernelModules = [ "nvidia" ];
-        blacklistedKernelModules = ["nouveau"];
 
         # Use the systemd-boot EFI boot loader.
         loader.systemd-boot.enable = true;
