@@ -23,21 +23,28 @@
         bluetooth = {
             enable = true;
         };
+        graphics = {
+            enable = true;
+            enable32Bit = true;
+        };
     };
-    environment.sessionVariables = { LIBVA_DRIVER_NAME = "iHD"; };
 
-# Use the systemd-boot EFI boot loader.
-    boot.loader.systemd-boot.enable = true;
-    boot.loader.efi.canTouchEfiVariables = true;
+    boot = {
+        # Use the systemd-boot EFI boot loader.
+        loader.systemd-boot.enable = true;
+        loader.efi.canTouchEfiVariables = true;
 
-    boot.kernelModules = ["uinput"];
+        kernelModules = ["uinput"];
+        kernelPackages = pkgs.linuxPackages_zen;
+    };
+
     services = {
         cron = {
-            enable = true;
+            enable = false;
             systemCronJobs = [ ];
         };
 
-        flatpak.enable = true;
+        flatpak.enable = false;
 
         udev = {
             enable = true;
@@ -59,6 +66,13 @@
                 support32Bit = true;
             };
             pulse.enable = true;
+            wireplumber = {
+                enable = true;
+            };
+        };
+
+        ratbagd = {
+            enable = true;
         };
 
         tlp = {
@@ -122,6 +136,7 @@
         packages = with pkgs; [
             siji
             nerd-fonts.dejavu-sans-mono
+            nerd-fonts.geist-mono
         ];
     };
 
@@ -141,6 +156,8 @@
                 auth include login
             '';
         };
+
+        # Veio da página do pipewire do nixos
         rtkit.enable = true;
     };
 
@@ -148,12 +165,13 @@
     environment.systemPackages = with pkgs; [
 # General
         bat
+        bc
         bottom
         brightnessctl
-        calc
-        du-dust
+        cliphist
+        dust
         dunst
-        eww
+        evince # pdf reader
         eza
         fastfetch
         fd
@@ -161,26 +179,39 @@
         grc
         grim # for screenshots
         gtypist
-        hyprcursor
-        hyprpaper
-        hyprsome
         imagemagick
+        jq
         libnotify
         p7zip
         playerctl
         pwvucontrol
         pyprland
         ripgrep
+        rofi
+        libqalculate # calculator
         slurp # for screenshots
         socat
         sudo
+        swww
+        tealdeer
         unrar
         unzip
         waybar
+        wev
         wget
         wl-clipboard
-        wofi
         xdg-utils
+        xremap
+        yazi
+
+#Hyprland stuff
+        # hyprpaper
+        # hyprsome
+        hyprcursor
+        hyprlock
+        hyprpanel
+        hyprpolkitagent
+        hyprsunset
 
 # Git
         gh
@@ -189,15 +220,19 @@
         yadm
 
 # Linux stuff
+        at
         cmake
         egl-wayland
-        gcc11
-        gcc11Stdenv
+        gcc
+        gccStdenv
         glibc
         glibc.out
+        libGL
+        libGL.out
         gnumake
-        llvmPackages_17.stdenv
+        llvmPackages_latest.stdenv
         util-linux
+        wine-wayland
 
 # Apps
         firefox
@@ -242,8 +277,9 @@
         enable = true;
         autosuggestions.enable = true;
         interactiveShellInit = ''
+            bindkey -v
             export PATH=$PATH:$HOME/.local/bin
-            export PATH=$PATH:$HOME/.config/yarn/global/node_modules/.bin/
+            export PATH=$PATH:$HOME/.yarn/bin/
             export PATH=$PATH:$HOME/.cargo/bin/
             export PATH=$PATH:$HOME/go/bin/
 
@@ -252,6 +288,12 @@
             eval "$(zoxide init --cmd cd zsh)"
             export PATH="$HOME/.local/share/fnm:$PATH"
             eval "`fnm env`"
+            eval "$(oh-my-posh init zsh --config ~/.config/oh-my-posh/main.toml)"
+
+            export DOOM_WAD=$HOME/doom/iwads/DOOM.WAD
+            export DOOM2_WAD=$HOME/doom/iwads/DOOM2.WAD
+            export PLUTONIA_WAD=$HOME/doom/iwads/PLUTONIA.WAD
+            export TNT_WAD=$HOME/doom/iwads/TNT.WAD
         '';
         ohMyZsh = {
             enable = true;
@@ -282,12 +324,11 @@
             la = "ll -a";
             tree = "ls --tree --git-ignore";
             t = "tmux";
-            H = "Hyprland";
-            nalias = "nvim ~/.zsh_aliases";
+            H = "start-hyprland";
             nnix = "nvim /etc/nixos/configuration.nix";
 
             # Kitty
-            icat = "kitty +kitten icat";
+            icat = "kitty +icat";
             s = "kitty +kitten ssh";
 
             #Git
@@ -321,6 +362,8 @@
         enable = true;
         libraries = [
             pkgs.stdenv.cc.cc.lib
+            pkgs.glibc
+            pkgs.libGL
         ];
     };
 
