@@ -192,17 +192,22 @@
         yadm
 
 # Linux stuff
+        SDL2
         at
+        clang-tools
         cmake
         egl-wayland
         gcc
         gccStdenv
         glibc
         glibc.out
+        gnumake
         libGL
         libGL.out
-        gnumake
-        SDL2
+        llvmPackages_latest.clang
+        llvmPackages_latest.libcxx
+        llvmPackages_latest.libllvm
+        llvmPackages_latest.lldb
         util-linux
         wine-wayland
 
