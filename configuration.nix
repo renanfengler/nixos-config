@@ -216,6 +216,7 @@
         firefox
         heroic-unwrapped
         mpv
+        nwg-displays
         pcsx2
         qbittorrent
         rpcs3
