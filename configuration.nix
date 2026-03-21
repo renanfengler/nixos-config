@@ -77,6 +77,10 @@
         ratbagd = {
             enable = true;
         };
+
+        displayManager.ly = {
+            enable = true;
+        };
     };
 
     networking = {
