@@ -36,6 +36,9 @@
 
         kernelModules = ["uinput"];
         kernelPackages = pkgs.linuxPackages_zen;
+        kernelParams = [
+            "quiet"
+        ];
     };
 
     services = {
