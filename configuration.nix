@@ -42,13 +42,6 @@
     };
 
     services = {
-        cron = {
-            enable = false;
-            systemCronJobs = [ ];
-        };
-
-        flatpak.enable = false;
-
         udev = {
             enable = true;
             extraRules = ''
@@ -80,6 +73,9 @@
 
         displayManager.ly = {
             enable = true;
+            settings = {
+                animation = "doom";
+            };
         };
     };
 
@@ -190,6 +186,7 @@
         hyprlock
         hyprpanel
         hyprpolkitagent
+        hyprshutdown
         hyprsunset
 
 # Git
@@ -199,11 +196,8 @@
         yadm
 
 # Linux stuff
-        SDL2
         at
-        clang-tools
         cmake
-        egl-wayland
         gcc
         gccStdenv
         glibc
@@ -249,9 +243,6 @@
         lefthook
         lua
         meld
-        php83
-        php83Extensions.ds
-        php83Packages.composer
         python3
         python312Packages.pip
         rustup
@@ -261,7 +252,6 @@
     environment.variables = {
         EDITOR = "nvim";
     };
-    environment.sessionVariables.NIXOS_OZONE_WL = "1";
 
     programs.zsh = {
         enable = true;
@@ -279,11 +269,6 @@
             export PATH="$HOME/.local/share/fnm:$PATH"
             eval "`fnm env`"
             eval "$(oh-my-posh init zsh --config ~/.config/oh-my-posh/main.toml)"
-
-            export DOOM_WAD=$HOME/doom/iwads/DOOM.WAD
-            export DOOM2_WAD=$HOME/doom/iwads/DOOM2.WAD
-            export PLUTONIA_WAD=$HOME/doom/iwads/PLUTONIA.WAD
-            export TNT_WAD=$HOME/doom/iwads/TNT.WAD
         '';
         ohMyZsh = {
             enable = true;
@@ -322,7 +307,6 @@
             s = "kitty +kitten ssh";
 
             #Git
-            gac = "git add ./";
             gca = "git commit --amend --no-edit";
             yl = "yadm pull";
             yp = "yadm push";
